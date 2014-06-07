@@ -1,0 +1,14 @@
+{
+    "name": "auto-depoloy",
+    "version": "0.0.1",
+    "scripts": {
+        "start": "node index.js"
+    },
+    "engines": {
+        "node": "0.10.21"
+    },
+    "dependencies": {
+        "gitlabhook": "0.0.11",
+        "nconf": "0.6.x"
+    }
+}
