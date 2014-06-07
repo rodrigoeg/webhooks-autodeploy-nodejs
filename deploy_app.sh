@@ -6,7 +6,7 @@ BRANCH=$(echo $2 | sed -e "s/refs\/heads\///g")
 URL=$(echo $3)
 
 # update or clone repository
-if [ "$BRANCH" == "master" ]; then
+if [ "$BRANCH" == "$CHECKOUT_BRANCH" ]; then
   if [ -d "$REPOSITORY" ]; then
     # force all updates
     cd $1
@@ -16,9 +16,10 @@ if [ "$BRANCH" == "master" ]; then
   else
     git clone $URL -b $BRANCH
   fi
+
+  # install dependences
+  cd $REPOSITORY
+  npm install
+  cd ..
 fi
 
-# install dependences
-cd $REPOSITORY
-npm install
-cd ..
