@@ -6,7 +6,7 @@ BRANCH=$(echo $2 | sed -e "s/refs\/heads\///g")
 URL=$(echo $3)
 
 # update or clone repository
-if [ "$BRANCH" == "development" ]; then
+if [ "$BRANCH" == "master" ]; then
   if [ -d "$REPOSITORY" ]; then
     # force all updates
     cd $1
