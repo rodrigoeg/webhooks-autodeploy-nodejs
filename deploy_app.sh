@@ -13,6 +13,7 @@ if [ "$BRANCH" == "$CHECKOUT_BRANCH" ]; then
     cd $1
     git fetch --all
     git reset --hard origin/$BRANCH
+    git checkout origin/$BRANCH
     cd ..
   else
     git clone $URL -b $BRANCH
