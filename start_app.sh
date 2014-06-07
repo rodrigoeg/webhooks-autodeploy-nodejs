@@ -16,7 +16,7 @@ if [ "$BRANCH" == "$CHECKOUT_BRANCH" ]; then
       --school-history-uri=http://prj08.lasca.ic.unicamp.br:80
   fi
 
-  if [ "$BRANCH" == "master" ]; then
+  if [ "$BRANCH" == "staging" ]; then
     forever start ./$REPOSITORY/cluster.js \
       --server-port=80 \
       --auth-uri=http://prj01.lasca.ic.unicamp.br:80 \
