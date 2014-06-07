@@ -1,7 +1,9 @@
 #!/bin/sh
 # Start the server
 
-forever start ./$1/cluster.js \
+REPOSITORY=$(echo $1)
+
+forever start ./$REPOSITORY/cluster.js \
 --server-port=80 \
 --auth-uri=http://prj02.lasca.ic.unicamp.br:80 \
 --calendar-uri=http://prj13.lasca.ic.unicamp.br:80 \

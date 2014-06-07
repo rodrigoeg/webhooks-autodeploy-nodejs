@@ -1,4 +1,6 @@
 #!/bin/sh
 # Stop the server
 
-forever stop ./$1/cluster.js
+REPOSITORY=$(echo $1)
+
+forever stop $REPOSITORY/cluster.js
