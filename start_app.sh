@@ -7,7 +7,7 @@ URL=$(echo $3)
 CHECKOUT_BRANCH=$(echo $4)
 
 if [ "$BRANCH" == "$CHECKOUT_BRANCH" ]; then
-  if [ "$BRANCH" == "development" ]; then
+  if [ "$BRANCH" == "staging" ]; then
     forever start ./$REPOSITORY/cluster.js \
       --server-port=80 \
       --auth-uri=http://prj02.lasca.ic.unicamp.br:80 \
@@ -16,7 +16,7 @@ if [ "$BRANCH" == "$CHECKOUT_BRANCH" ]; then
       --school-history-uri=http://prj08.lasca.ic.unicamp.br:80
   fi
 
-  if [ "$BRANCH" == "staging" ]; then
+  if [ "$BRANCH" == "master" ]; then
     forever start ./$REPOSITORY/cluster.js \
       --server-port=80 \
       --auth-uri=http://prj01.lasca.ic.unicamp.br:80 \
