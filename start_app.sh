@@ -9,7 +9,7 @@ CHECKOUT_BRANCH=$(echo $4)
 if [ "$BRANCH" == "$CHECKOUT_BRANCH" ]; then
   if [ "$BRANCH" == "staging" ]; then
     forever start ./$REPOSITORY/cluster.js \
-      --server-port=80 \
+      --server-port=8080 \
       --auth-uri=http://prj02.lasca.ic.unicamp.br:80 \
       --calendar-uri=http://prj13.lasca.ic.unicamp.br:80 \
       --courses-uri=http://prj04.lasca.ic.unicamp.br:80 \
@@ -18,7 +18,7 @@ if [ "$BRANCH" == "$CHECKOUT_BRANCH" ]; then
 
   if [ "$BRANCH" == "master" ]; then
     forever start ./$REPOSITORY/cluster.js \
-      --server-port=80 \
+      --server-port=8080 \
       --auth-uri=http://prj01.lasca.ic.unicamp.br:80 \
       --calendar-uri=http://prj14.lasca.ic.unicamp.br:80 \
       --courses-uri=http://prj03.lasca.ic.unicamp.br:80 \
