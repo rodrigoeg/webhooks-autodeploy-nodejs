@@ -5,7 +5,7 @@ gitlabhook = require('gitlabhook');
 
 nconf.argv().env();
 nconf.defaults({
-    'server-port': 8080
+    'server-port': 8888
 });
 
 logger = {
