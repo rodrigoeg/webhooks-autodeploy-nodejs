@@ -13,7 +13,7 @@ if [ "$BRANCH" == "$CHECKOUT_BRANCH" ]; then
       --auth-uri=http://prj02.lasca.ic.unicamp.br:80 \
       --calendar-uri=http://prj13.lasca.ic.unicamp.br:80 \
       --courses-uri=http://prj04.lasca.ic.unicamp.br:80 \
-      --school-history-uri=http://prj08.lasca.ic.unicamp.br:80
+      --school-history-uri=http://prj12.lasca.ic.unicamp.br:8080
   fi
 
   if [ "$BRANCH" == "master" ]; then
@@ -22,6 +22,6 @@ if [ "$BRANCH" == "$CHECKOUT_BRANCH" ]; then
       --auth-uri=http://prj01.lasca.ic.unicamp.br:80 \
       --calendar-uri=http://prj14.lasca.ic.unicamp.br:80 \
       --courses-uri=http://prj03.lasca.ic.unicamp.br:80 \
-      --school-history-uri=http://prj07.lasca.ic.unicamp.br:80
+      --school-history-uri=http://prj11.lasca.ic.unicamp.br:8080
   fi
 fi
